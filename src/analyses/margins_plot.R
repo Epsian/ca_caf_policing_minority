@@ -112,7 +112,7 @@ e_num_fb = ggpredict(n2p, "jur_perc_foreign_born[0:50 by=1]")
 
 # make plots
 num_plots = ggarrange(
-  plot(e_num_black, limits = c(0, 30), show.title = FALSE) + xlab("Logged % Black") + ylab("Number of Seizures"),
+  plot(e_num_black, limits = c(0, 30), show.title = FALSE) + xlab("Logged % Black") + ylab("Number of Seizures") + scale_x_continuous(limits = c(0, 2)),
   plot(e_num_fb,  limits = c(0, 30), show.title = FALSE) + xlab("% Foreign Born") + ylab("Number of Seizures"),
   nrow = 1, ncol = 2
 )
